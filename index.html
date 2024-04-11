@@ -50,9 +50,8 @@
             }
 
             var postData = {
-              roadAddress: data.roadAddress,
-              jibunAddress: jibunAddress,
-              zonecode: data.zonecode,
+              address: data.roadAddress,
+              zipCode: data.zonecode,
             };
             window.postMessageToiOS(postData);
           },
