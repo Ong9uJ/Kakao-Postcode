@@ -43,12 +43,6 @@
           oncomplete: function (data) {
             var jibunAddress = "";
 
-            if (data.jibunAddress == "") {
-              jibunAddress = data.autoJibunAddress;
-            } else if (data.autoJibunAddress == "") {
-              jibunAddress = data.jibunAddress;
-            }
-
             var postData = {
               address: data.roadAddress,
               zipCode: data.zonecode,
