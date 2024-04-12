@@ -37,6 +37,10 @@
         window.webkit.messageHandlers.callBackHandler.postMessage(postData);
       }
 
+      function postMessageToAndroid(androidData) {
+        window.Android.processData(androidData)
+      }
+
       var element_layer = document.getElementById("layer");
       function execDaumPostcode() {
         new daum.Postcode({
@@ -45,6 +49,9 @@
               address: data.roadAddress,
               zipCode: data.zonecode,
             };
+
+            var androidData = data.zoneCode + ", " + data.roadAddress
+            window.postMessageToAndroid(androidData)
             window.postMessageToiOS(postData);
           },
           width: "100%",
