@@ -50,8 +50,8 @@
               zipCode: data.zonecode,
             };
 
-            var androidData = data.zonecode + "," + data.roadAddress
-            window.postMessageToAndroid(androidData)
+            var androidData = data.zonecode + ":" + data.roadAddress
+            window.postMessageToAndroid(postData)
             window.postMessageToiOS(postData);
           },
           width: "100%",
