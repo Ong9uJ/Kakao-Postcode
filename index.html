@@ -49,9 +49,8 @@
               address: data.roadAddress,
               zipCode: data.zonecode,
             };
-
-            var androidData = data.zonecode + ", " + data.roadAddress;
             window.postMessageToiOS(postData);
+            var androidData = data.zonecode + ", " + data.roadAddress;
             window.postMessageToAndroid(androidData);
           },
           width: "100%",
